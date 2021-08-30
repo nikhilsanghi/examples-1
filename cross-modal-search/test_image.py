@@ -19,10 +19,6 @@ with open('data.json', 'w') as f:
 
 def print_pic(b64_string, i):
     doc = Document(b64_string)
-    doc.convert_image_datauri_to_blob()
-    # print(doc.blob)
-    x = base64.b64encode(doc.uri.encode('ascii'))
-    content = base64.b64decode(x)
     cv2.imwrite(str(i)+'.jpg', cv2.cvtColor(doc.blob, cv2.COLOR_RGB2BGR))
 
 
