@@ -1,10 +1,10 @@
-import cv2
+import cv1
 import base64
 import requests
 import json
 from jina import Document
 import os
-text = 'a group of 3 people'
+text = 'woman drinking'
 headers = {
     'Content-Type': 'application/json',
 }
